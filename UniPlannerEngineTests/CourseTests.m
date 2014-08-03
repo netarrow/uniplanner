@@ -101,11 +101,11 @@ UNPConfiguration* config;
     UNPCourse* shortCourse = [[UNPCourse alloc] initCourse:@"Intro to nothing" cfu:1 margin:1 lessonStart:[NSDate dateByDay:28 month:4 andYear:2014] lessonEnd:[NSDate dateByDay:13 month:5 andYear:2014] examDate:nil];
     shortCourse.configuration = config;
 
-    UNPLesson* morning = [[UNPLesson alloc] initForDay:1 start:@"9:00" end:@"12:00"];
-    UNPLesson* afternoon = [[UNPLesson alloc] initForDay:1 start:@"15:00" end:@"16:00"];
-    UNPLesson* nextDay = [[UNPLesson alloc] initForDay:2 start:@"10:00" end:@"11:00"];
-    UNPLesson* nextDayAfternoon = [[UNPLesson alloc] initForDay:3 start:@"16:00" end:@"18:00"];
-    // in total are 19 hours for this course
+    UNPLesson* morning = [[UNPLesson alloc] initForDay:1 start:@"9:00" end:@"12:00"];   // 3
+    UNPLesson* afternoon = [[UNPLesson alloc] initForDay:1 start:@"15:00" end:@"16:00"];  // 1
+    UNPLesson* nextDay = [[UNPLesson alloc] initForDay:2 start:@"10:00" end:@"11:00"];  // 1
+    UNPLesson* nextDayAfternoon = [[UNPLesson alloc] initForDay:3 start:@"16:00" end:@"18:00"];  // 2
+    // 3 days of lessons, 7 hours per week, in total are 19 hours for this course
 
     [shortCourse addLesson:morning];
     [shortCourse addLesson:afternoon];
